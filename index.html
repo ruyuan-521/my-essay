@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我是怎样的人</title>
+
+  <style>
+    :root {
+      --bg: #faf8f5;
+      --bg2: #f0ebe3;
+      --ink: #2c2c2c;
+      --muted: #7a7265;
+      --rule: #d6cfc5;
+      --accent: #b8860b;
+      --accent2: #6b8e6b;
+      --font: 'Songti SC', 'SimSun', 'Noto Serif CJK SC', serif;
+      --font-sans: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif;
+      --max: 780px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 17px; scroll-behavior: smooth; }
+    body {
+      font-family: var(--font);
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 2;
+      padding: 0;
+    }
+
+    /* Hero —— 使用 CSS 渐变代替外部图片 */
+    .hero {
+      position: relative;
+      width: 100%;
+      min-height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin-bottom: 3rem;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(184,134,11,0.35), transparent 55%),
+        radial-gradient(circle at 80% 70%, rgba(107,142,107,0.35), transparent 55%),
+        linear-gradient(135deg, #3a3a2f 0%, #5a4a3a 50%, #2f3a2f 100%);
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0 2px, transparent 2px 8px);
+      pointer-events: none;
+    }
+    .hero-overlay {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+    .hero-overlay h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.15em;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+      margin-bottom: 0.5rem;
+    }
+    .hero-overlay .subtitle {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      color: rgba(255,255,255,0.8);
+      letter-spacing: 0.1em;
+      font-weight: 300;
+    }
+
+    /* Article */
+    article.page {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 2rem 4rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-top: 3rem;
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--rule);
+      letter-spacing: 0.05em;
+    }
+
+    p {
+      text-indent: 2em;
+      margin-bottom: 1.2rem;
+      text-align: justify;
+    }
+
+    mark.key {
+      background: none;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    blockquote {
+      margin: 2rem 0;
+      padding: 1.2rem 1.5rem;
+      border-left: 4px solid var(--accent);
+      background: var(--bg2);
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      color: var(--muted);
+      line-height: 1.9;
+    }
+    blockquote p {
+      text-indent: 0;
+      margin-bottom: 0;
+    }
+
+    .divider {
+      text-align: center;
+      margin: 2.5rem 0;
+      color: var(--rule);
+      font-size: 1.2rem;
+      letter-spacing: 0.5em;
+    }
+
+    .ending {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+    }
+
+    @media (max-width: 600px) {
+      html { font-size: 15px; }
+      .hero { min-height: 280px; }
+      .hero-overlay h1 { font-size: 2rem; }
+      article.page { padding: 0 1.2rem 3rem; }
+    }
+
+    @media print {
+      .hero { min-height: 200px; }
+      body { padding: 0; }
+      article.page { padding: 0 1rem 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="hero-overlay">
+      <h1>我是怎样的人</h1>
+      <div class="subtitle">一篇关于自我认知的作文</div>
+    </div>
+  </div>
+
+  <article class="page">
+
+    <p>
+      认识自己，是人生中最漫长也最重要的旅程。苏格拉底曾说：<mark class="key">"认识你自己"</mark>，这句话穿越了两千多年的时光，至今仍叩击着每一个人的心灵。那么，我究竟是怎样的人呢？这个问题看似简单，回答起来却需要莫大的勇气与真诚。我愿意在这篇文章中，试着描绘一个真实的自己。
+    </p>
+
+    <h2>一个热爱思考的人</h2>
+
+    <p>
+      我是一个喜欢安静思考的人。当周围的人热衷于热闹的聚会和喧嚣的社交时，我更愿意捧一杯清茶，坐在窗前，让思绪自由地飘散。我喜欢阅读，因为书籍是通往无数个世界的桥梁。在文字的世界里，我可以与古人对话，与哲人争辩，与诗人共鸣。<mark class="key">每一本书都是一面镜子，照见我内心深处那些未曾被察觉的角落。</mark>
+    </p>
+
+    <p>
+      我也喜欢写作。文字是我表达情感和思考的方式。当我把纷乱的思绪化作笔下的文字时，内心便获得了一种难以言喻的平静与满足。写作让我学会了审视自己，让我明白，<mark class="key">真正的表达不是华丽的辞藻，而是发自内心的真诚。</mark>
+    </p>
+
+    <blockquote>
+      <p>"人只有在独处时才能成为自己。谁要是不热爱独处，那他就不热爱自由，因为一个人只有独处时才是自由的。" —— 叔本华</p>
+    </blockquote>
+
+    <h2>一个执着坚韧的人</h2>
+
+    <p>
+      我并非天生聪慧，但我相信<mark class="key">"勤能补拙"</mark>这个朴素的道理。在学习中，我常常会遇到难以逾越的障碍——那些晦涩的公式、复杂的逻辑、反复出错的习题，都曾让我感到沮丧和迷茫。然而，我从不轻易放弃。我深知，每一次跌倒都是成长的机会，每一次失败都蕴含着成功的种子。
+    </p>
+
+    <p>
+      记得有一次，我花了整整两周的时间去攻克一道数学难题。白天想、晚上想，甚至连做梦都在推演公式。当我终于找到解题思路的那一刻，那种豁然开朗的喜悦，是任何轻易得来的成功都无法比拟的。这段经历让我更加坚信：<mark class="key">坚持的力量远比天赋更为可靠，而真正的成长往往发生在那些最艰难的时刻。</mark>
+    </p>
+
+    <div class="divider">· · ·</div>
+
+    <h2>一个温暖善良的人</h2>
+
+    <p>
+      我希望自己是一个温暖的人。在这个快节奏的时代，人与人之间的距离似乎越来越远，但我始终相信，<mark class="key">善良是人与人之间最珍贵的纽带。</mark>我喜欢帮助别人，无论是为迷路的陌生人指路，还是在朋友失落时给予一个安静的陪伴。这些看似微不足道的小事，却能在我心中激起最真实的幸福感。
+    </p>
+
+    <p>
+      我也有自己的柔软和脆弱。我会因为一部感人的电影而落泪，会因为朋友的一句关心而感动不已。我不认为这是软弱，相反，<mark class="key">能够感知他人的痛苦与快乐，正是一种珍贵的共情能力。</mark>它让我更加理解这个世界的多元与复杂，也让我学会了以更加包容的心态去面对生活中的每一个人。
+    </p>
+
+    <h2>一个不断成长的人</h2>
+
+    <p>
+      我深知自己并不完美。我有拖延的毛病，有时会过于理想化，偶尔也会在困难面前犹豫不决。但我并不为此感到羞愧，因为<mark class="key">承认自己的不足，恰恰是迈向更好自己的第一步。</mark>我正在努力改正这些缺点，学着更加自律、更加务实、更加果断。
+    </p>
+
+    <p>
+      我相信人是可以不断蜕变和成长的。今天的我与昨天的我不同，而明天的我也必将超越今天的我。这种对成长的信念，赋予了我面对生活不确定性的勇气。<mark class="key">我并不追求成为一个完美的人，我只希望成为一个每天都在进步的人。</mark>
+    </p>
+
+    <blockquote>
+      <p>"世界上最重要的事情，不在于我们身在何处，而在于我们朝什么方向走。" —— 霍姆斯</p>
+    </blockquote>
+
+    <h2>结语</h2>
+
+    <p>
+      我是一个热爱思考的人，一个执着坚韧的人，一个温暖善良的人，也是一个不断成长的人。这些词语或许还不足以完整地描绘我，但它们是我对自己最真诚的回答。我知道，随着岁月的流逝，我对自己的认知还会不断深化和改变。而这，正是认识自我这件事最迷人的地方——<mark class="key">它没有终点，只有永远在前方延伸的道路。</mark>
+    </p>
+
+    <p>
+      我期待着在未来的日子里，遇见一个更加成熟、更加从容、更加真实的自己。
+    </p>
+
+    <div class="ending">
+      —— 写于自我认知的旅途中
+    </div>
+
+  </article>
+
+</body>
+</html>
